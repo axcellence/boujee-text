@@ -15,6 +15,7 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
+  height: 100dvh;
   font-family: system-ui;
   background: var(--bg);
 }
