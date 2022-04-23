@@ -1,0 +1,48 @@
+:root {
+  --bg-size: 400%;
+  --bg: hsl(0, 0%, 10%);
+  --color1: hsla(32, 70%, 95%, 1);
+  --color2: hsla(25, 54%, 85%, 1);
+  --color3: hsla(341, 74%, 79%, 1);
+  --color4: hsla(324, 52%, 73%, 1);
+  --color5: hsla(294, 39%, 65%, 1);
+  --color6: hsla(247, 72%, 72%, 1);
+  --color7: hsla(208, 95%, 77%, 1);
+  --color8: hsla(187, 100%, 89%, 1);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: system-ui;
+  background: var(--bg);
+}
+
+.boujee {
+  font-size: clamp(3rem, 12.5vmin, 12rem);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(
+      135deg,
+      var(--color1),
+      var(--color2),
+      var(--color3),
+      var(--color4),
+      var(--color5),
+      var(--color6),
+      var(--color7),
+      var(--color8)
+    )
+    0 0 / var(--bg-size) 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: move-bg 20s infinite linear;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
